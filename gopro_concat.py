@@ -5,6 +5,7 @@ import glob
 import os
 import sys
 import subprocess
+import collections
 
 
 def get_files_dict(directory):
@@ -26,7 +27,7 @@ def get_files_dict(directory):
             sys.exit(-1)
         file_dict = dict_mp4_files.setdefault(mp4_file_number, {})
         file_dict[dict_index] = mp4_file
-
+    dict_mp4_files = collections.OrderedDict(sorted(dict_mp4_files.items()))
     return dict_mp4_files
 
 
