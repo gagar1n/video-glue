@@ -1,0 +1,4 @@
+---
+client_id: """int Client ID from http://labs.strava.com/developers/"""
+client_secret: """Client Secret from http://labs.strava.com/developers/"""
+access_token: """Access Token from http://labs.strava.com/developers/"""
