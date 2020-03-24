@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  video-glue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "${GLUE_DATA_DIR}:/data"
