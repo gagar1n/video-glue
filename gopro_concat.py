@@ -37,8 +37,8 @@ def create_ffmpeg_input_file(dict_mp4_files, directory):
     input_filename = os.path.join(directory, 'ffmpeg_input')
     with open(input_filename, 'w') as ffmpeg_input_file:
         for files_item in dict_mp4_files.items():
-            for file_name in files_item[1].values():
-                ffmpeg_input_file.writelines("file '" + os.path.join(directory, file_name) + "'\n")
+            for cnt in range(len(files_item[1])):
+                ffmpeg_input_file.writelines("file '" + os.path.join(directory, files_item[1][cnt]) + "'\n")
     return input_filename
 
 
